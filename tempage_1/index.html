@@ -2,18 +2,148 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Test github Page</title>
-	 <link rel="shortcut icon" href="../img/logo50x50.png">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+	<!-- jQuery library -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="style.css" rel="stylesheet">
+	<script type="text/javascript" src="https://use.fontawesome.com/ffede72bec.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="numcount.js"></script>
 </head>
-<body>
-	<div class="row">
-		<ul>
-			<li class="menu">Menu 1</li>
-			<li class="menu">Menu 2</li>
-			<li class="menu">Menu 3</li>
-		</ul>
-		<a href="../index.html">На главную</a>
+<nav class="navbar navbar-inverse" style="  background-color: #2065b1;min-height: 36px;   border-color:none;    margin-bottom: 0px;  border: none;  ">
+	<div class="menu container">
+		<div class="navbar-header " style="">
+			<div class="col-sm-2 " id="seach1" style="  display: inline-block;    margin-top: 0%;    margin-left: 25px;   width: 267px;">
+				<div class="search">
+					<form action="" method="post" id="search" style="    margin-bottom: 0px;">
+						<input type="text" name="" id="searchinp" placeholder="Поиск" onblur="if(this.placeholder=='') this.placeholder='Поиск';" onfocus="if(this.placeholder=='Поиск') this.value='';" class="input" />
+						<input type="submit" name="" value="" class="submit" />
+					</form>
+				</div>
+			</div>
+			<button type="button" style="margin: 0px;    margin-right: 12px;    margin-top: -5px;" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar" style="  background-color: #2065b1;    border:0px ;">
+			<ul class="nav navbar-nav">
+				<li>
+					<a href="../index.html">
+						<div class="col-sm-1 menu_border" style="        width: 89px; ">
+							Главная
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="col-sm-1 menu_border" style="    width: 77px; ">
+							Услуги
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="col-sm-1 menu_border" style="    width: 108px; ">
+							Прайс-лист
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="col-sm-2 menu_border" style="    width: 89px; ">
+							Новости
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="col-sm-2 menu_border" style="    width: 174px; ">
+							Полезные материалы
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="col-sm-2 menu_border" style="    width: 90px; ">
+							Контакты
+						</div>
+					</a>
+				</li>
+				<li id="#">
+					<div class="col-sm-2" id="seach" style="     width: 150px;">
+
+
+						<div class="search" onclick="return {'action':'https://yandex.ru/search/site/'}">
+							<form action="http://mk.spbtendery.ru/search.php" method="get" target="_self" accept-charset="utf-8" id="search" style="margin-bottom: 0px;">
+								<input type="hidden" name="searchid" value="2298858"/>
+								<input type="hidden" name="l10n" value="ru"/>
+								<input type="hidden" name="reqenc" value=""/>
+								<input type="search" name="text" id="searchinp" placeholder="Поиск" onblur="if(this.placeholder=='') this.placeholder='Поиск';" onfocus="if(this.placeholder=='Поиск') this.value='';" class="input" />
+								<input type="submit" name="" value="" class="submit" />
+							</form>
+						</div>
+						<script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');
+						</script>
+					</div>
+				</li>
+			</ul>
+		</div>
 	</div>
+</nav>
+
+
+
+<!-- Modal Оставить Заявку -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header" style="border-radius: 10px;">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+				<center>
+					<font id="ostav_zaavku" style=" color: #2870bf;font-size: 175%;"> <b>Оставьте заявку</b></font><br>
+					<form action="" method="post">
+						<input type="text" name="" value="" placeholder="Ваше имя" style="margin-top: 16px; width=100%;" class="sokr_width inp">
+						<br>
+						<input type="text" id="phone" name="" value="" placeholder="+7 (___) ___-__-__" class="sokr_width inp"><br>
+						<button type="submit" name="" id="podrobn" value="" class="button" style=" width: 50%;"> Подробнее</button>
+					</form>
+					<font style="font-size:15px;color:black;">Наш специалист свяжется с Вами <br> в самое ближайшее время!</font>
+				</center>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<body>
+
+		<div id="butt" class="col-md-3 col-xs-12">
+			<div class="center">
+				<a href="#popup-phone" id="zakzv" class="button btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Заказать звонок</a>
+			</div>
+		</div>
 </body>
 </html>
+
+
+
+
+
+
+
+
