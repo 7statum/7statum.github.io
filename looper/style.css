@@ -1,0 +1,12 @@
+body { margin: 0; padding: 0 }
+#mycanvas { position: absolute; width: 100%; height: 100%; overflow: hidden }
+
+@font-face {
+    font-family: Nicholas; /* Имя шрифта */
+    src: url(fonts/Nicholas.ttf); /* Путь к файлу со шрифтом */
+}
+p {
+    position: absolute;
+    font-family: Nicholas;
+    font-size: 270%;
+}
