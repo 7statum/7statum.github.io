@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HaloREC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/css/swiper.min.css">
+  <link rel="stylesheet" href="css/pannellum.css"/>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
+  <script src="js/pannellum.js"></script>
+
+</head>
+<body>
+  <div id="page-preloader" class="preloader">
+    <div class="loader"></div>
+  </div>
+  <div id="particles-js"></div>
+  <script>
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles-js', 'js/particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+  </script>
+  <div id="page-wrapper">
+    <div id="transcroller-body" class="aos-all">
+      <div class="aos-item" data-aos="fade-up">
+        <div class="aos-item__inner"><h2>Студия звукозаписи</h2></div>
+      </div>
+      <div class="aos-item" data-aos="fade-down">
+        <div class="aos-item__inner"><h1>Студия звукозаписи HalloRecords</h1></div>
+      </div>
+      <div class="aos-item" data-aos="fade-up">
+        <div class="aos-item__inner"><p style="text-align: left;">- Создание аранжировок<br>
+          - Частичное и полное продюсирование проекта<br>
+          - Дикторское озвучивание, запись синхронных шумов, озвучивание видеоконтента, закадр и дубляж<br>
+          - Сведение и мастеринг<br>
+        - Цифровая дистрибуция, размещение материала на всех доступных электронных площадках (Itunes, Google Play, Yandex.Музыка и т.д)</p></div>
+      </div>
+
+      <!-- Swiper -->
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><iframe width="100%" height="300" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/382893686&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+          <div class="swiper-slide"><iframe width="100%" height="300" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/439329297&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+          <div class="swiper-slide"><iframe width="100%" height="300" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/438333987&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+          <div class="swiper-slide"><iframe width="100%" height="300" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/382893611&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 45,
+            stretch: 1,
+            depth: 200,
+            modifier: 1,
+            slideShadows : true,
+          },
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+          },
+        });
+      </script>
+      <footer>
+              <div class="aos-item" data-aos="fade-in">
+        <div class="aos-item__inner"><p>Адрес: г.Москва, <br> метро Киевская, <br> ул. Бережковская набережная, дом 20 стр 5 <br>
+☎ +7 (499) 648-08-18, WhatsApp +79147053607</p></div>
+      </div>
+      </footer>
+    </div>
+    <br>
+    <!-- VR -->
+
+    <div id="panorama"></div>
+    <script>
+      pannellum.viewer('panorama', {   
+        "default": {
+          "preview": "images/examplepano-preview.jpg",
+          "firstScene": "circle",
+          "author": "Statum",
+          "sceneFadeDuration": 1000
+        },
+
+        "scenes": {
+          "circle": {
+            "title": "Первая комната",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": "images/panorama_02.jpg",
+            "hotSpots": [
+            {
+              "pitch": -2.1,
+              "yaw": 132.9,
+              "type": "scene",
+              "text": "Перейти во вторую комнату",
+              "sceneId": "house"
+            }
+            ]
+          },
+
+          "house": {
+            "title": "Вторая комната",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "images/demo1300px.jpg",
+            "hotSpots": [
+            {
+              "pitch": -0.6,
+              "yaw": 37.1,
+              "type": "scene",
+              "text": "Перейти в первую комнату",
+              "sceneId": "circle",
+              "targetYaw": -23,
+              "targetPitch": 2
+            }
+            ]
+          }
+        }
+      });
+    </script>
+
+  <script src="js/aos.js"></script>
+  <script src="js/preloader.js"></script>
+  <script>
+    AOS.init({
+      easing: 'ease-in-out-sine'
+    });
+  </script>
+</body>
+</html>

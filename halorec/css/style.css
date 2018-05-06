@@ -1,0 +1,91 @@
+  body {
+    background: black;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+  }
+  .preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 3;
+    transition: 1s all;
+    opacity: 1;
+    visibility: visible;
+  }
+  .loader {
+    width: 75px;
+    height: 75px;
+    border: 10px solid gray;
+    border-radius: 50%;
+    border-top-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: 1s spin infinite linear;
+  }
+
+  .done {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  @keyframes spin {
+    from {
+     transform: translate(-50%, -50%) rotate(0deg);
+   }
+   to {
+     transform: translate(-50%, -50%) rotate(360deg);
+   }
+ }
+ .swiper-pagination {
+  height: 30%;
+  top: 27%;
+
+}
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+#panorama {
+  width: 100%;
+  height: 400px;
+}
+#particles-js{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100;
+  z-index: 1;
+}
+#page-wrapper {
+  position: relative;
+  z-index: 2;
+}
