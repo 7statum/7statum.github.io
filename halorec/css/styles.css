@@ -6,9 +6,6 @@ font-family: 'Amatic SC', cursive;
 font-family: 'Rubik Mono One', sans-serif;
 font-family: 'Stalinist One', cursive;
 */
-body {
-  font-family: Helvetica,Tahoma;
-}
 h1 {
     color: white;
     font-family: 'Amatic SC', cursive;
@@ -42,7 +39,7 @@ p {
 
 .aos-all {
   width: 1000px;
-  max-width: 90%;
+  max-width: 100%;
   margin: 10vh auto 0 auto;
 }
 
@@ -63,8 +60,8 @@ p {
   text-align: center;
 }
 
-@media screen and (max-width: 800px) {
+/*@media screen and (max-width: 800px) {
+
   .aos-item {
-    width: 90%;
   }
-}
+}*/
