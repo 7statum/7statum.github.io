@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HaloREC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/css/swiper.min.css">
+  <link rel="stylesheet" href="css/pannellum.css"/>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
+  <script src="js/pannellum.js"></script>
+</head>
+<body>
+  <div id="page-preloader" class="preloader">
+    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+    <!-- <div class="loader"></div> -->
+  </div>
+  <div id="particles-js"></div>
+  <script>
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles-js', 'js/particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+  </script>
+  <div id="page-wrapper">
+    <!-- sideBar -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#" onclick="closeNav()">О Нас </a>
+      <a href="#panorama" onclick="openVR(),closeNav()">Студия </a>
+      <a href="#footer" onclick="closeNav()">Связь </a>
+      <a href="#map" onclick="openMap(),closeNav()" >Где </a>
+    </div>
+    <span style="z-index: 4;position: fixed;top:5px;left: 15px;color: white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      function openMap() {
+        document.getElementById("myOverlay").style.display = "block";
+      }
+      function closeMap() {
+        document.getElementById("myOverlay").style.display = "none";
+      }
+      function openVR() {
+        document.getElementById("myVR").style.display = "block";
+      }
+      function closeVR() {
+        document.getElementById("myVR").style.display = "none";
+      }
+    </script>
+<div id="myOverlay" class="overlay">
+  <span class="closebtn" onclick="closeMap()" title="Close Overlay">×</span>
+  <div class="overlay-content">
+    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d8984.536346637318!2d37.55409699814067!3d55.73879918879271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x46b54bb89af14363%3A0xa7ed16739fd756bf!2z0JrQuNC10LLRgdC60LDRjw!3m2!1d55.743763799999996!2d37.567594!4m5!1s0x46b54b9502e8e821%3A0x4f427a2baa0a9c17!2z0JHQtdGA0LXQttC60L7QstGB0LrQsNGPINC90LDQsS4sIDIwINGB0YLRgNC-0LXQvdC40LUgNSwg0JzQvtGB0LrQstCwLCAxMjEwNTk!3m2!1d55.735001999999994!2d37.55582!5e0!3m2!1sru!2sru!4v1525733480171" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+</div>
+<div id="myVR" class="overlay">
+  <span class="closebtn" onclick="closeVR()" title="Close Overlay">×</span>
+  <div class="overlay-content">
+    <div id="panorama"></div>
+  </div>
+</div>
+<!--     <nav class="social">
+      <ul>
+        <li><a class="menu" href="#">О Нас </a></li>
+        <li><a class="menu" href="#panorama">Студия </a></li>
+        <li><a class="menu" href="#footer">Связь </a></li>
+        <li><a class="menu" href="#map">Где </a></li>
+      </ul>
+    </nav> -->
+    <div id="transcroller-body" class="aos-all">
+
+
+      <!-- Swiper -->
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/439329297&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+          <div class="swiper-slide"><iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/382893686&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+          <div class="swiper-slide"><iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/438333987&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+          <div class="swiper-slide"><iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/382893611&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 45,
+            stretch: 1,
+            depth: 200,
+            modifier: 1,
+            slideShadows : true,
+          },
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+          },
+        });
+      </script>
+
+    </div>
+    <!-- VR -->
+
+
+    <script>
+      pannellum.viewer('panorama', {   
+        "default": {
+          "preview": "images/examplepano-preview.jpg",
+          "firstScene": "circle",
+          "author": "Statum",
+          "sceneFadeDuration": 1000
+        },
+
+        "scenes": {
+          "circle": {
+            "title": "Первая комната",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": "images/panorama_02.jpg",
+            "hotSpots": [
+            {
+              "pitch": -2.1,
+              "yaw": 132.9,
+              "type": "scene",
+              "text": "Перейти во вторую комнату",
+              "sceneId": "house"
+            }
+            ]
+          },
+
+          "house": {
+            "title": "Вторая комната",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "images/demo1300px.jpg",
+            "hotSpots": [
+            {
+              "pitch": -0.6,
+              "yaw": 37.1,
+              "type": "scene",
+              "text": "Перейти в первую комнату",
+              "sceneId": "circle",
+              "targetYaw": -23,
+              "targetPitch": 2
+            }
+            ]
+          }
+        }
+      });
+    </script>
+
+
+
+
+
+    <script src="js/aos.js"></script>
+    <script src="js/preloader.js"></script>
+    <script>
+      AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+    </script>
+  </body>
+  </html>
