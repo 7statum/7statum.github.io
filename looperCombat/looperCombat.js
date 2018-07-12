@@ -1,22 +1,21 @@
 window.onload = init;
 var context;
 var bufferLoader;
+var audioPlaylist = [
+  //ffmpeg -i in.wav -acodec pcm_s16le -ar 16000 out.wav
+  'intro1.wav',       //0
+  'loop1.wav',        //1
+  'sample1_1.wav',    //2
+  'sample2_1.wav',    //3
+  ];
 
 function init() {
   window.AudioContext = window.AudioContext || window.webkitAudioContext;
   context = new AudioContext();
   bufferLoader = new BufferLoader(
     context,
-    [
-      //ffmpeg -i in.wav -acodec pcm_s16le -ar 16000 out.wav
-      'intro1.wav',
-      'loop1.wav',
-      'sample1_1.wav',
-      'sample2_1.wav',
-      ],
-      finishedLoading
-      );
-
+    audioPlaylist,
+    finishedLoading);
   bufferLoader.load();
 }
 

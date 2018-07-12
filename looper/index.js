@@ -14,15 +14,13 @@ fon.src     = 'img/fon.jpg';
 
 fon.onload = function () {
     looper();
-    makeButton(sp1,"merged.mp3")
-    makeButton(sp2,'two')
+
 }
 //Цикл проигрования
 function looper() {
     update();
     render();
     requestAnimFrame(looper);
-
 }
 
 function update() {
@@ -53,25 +51,21 @@ function render() {
     //Отрисовка снежка
     for(i in snw) context.drawImage(snow, snw[i].x, snw[i].y, snw[i].size,snw[i].size);
 //Кнопки
-
+makeButton(sp1,'one')
+makeButton(sp2,'two')
 }
 
-
-
-
-
+const sound = new Howl({
+  src: ['merged.mp3'],
+  sprite: {
+    one: [38, 54870, true],
+    two: [120100, 13535, true]
+}});
 makeButton = (idbut,sprite) => 
 {
-    const sound = new Howl({
-      src: [sprite]
-    });
-    button.sound = sound;
-    button.interactive = true;
-    button.on('pointerdown', event => sound.play());
-
     function onClick() {
         if(sound.stop() != true)
-            sound.play()
+            sound.play(sprite)
         else if (sound == true)
             sound.stop()
     };
