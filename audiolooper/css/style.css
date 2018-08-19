@@ -1,0 +1,27 @@
+#app {
+    display: block;
+    background-color: gray;
+}
+
+button {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    outline: 0;
+}
+
+#play1{
+    top: 40px;
+    left: 300px;
+}
+
+#play2{
+    top: 40px;
+    left: 400px;
+}
+
+#stop{
+    top: 40px;
+    left: 500px;
+}
