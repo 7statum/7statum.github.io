@@ -1,0 +1,114 @@
+<!doctype HTML>
+<html>
+<link rel="shortcut icon" href="Favicon-AR-Flugmodelle.png">
+<script src="src/aframe.min.js"></script>
+<script src="src/aframe-ar.js"></script>
+<script>THREEx.ArToolkitContext.baseURL = "three.js/"</script>
+
+
+<body style='margin : 0px; overflow: hidden;'>
+  <!-- input a-scene tag: -- allowfullscreen="yes" -->
+  <a-scene embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; detectionMode: mono_matrix; sourceType: webcam;'>
+
+    <a-entity light="type: ambient; color: #fff">
+    </a-entity>
+
+    <!-- <a-marker preset='hiro'>
+      <a-text side='double' value="Test text \n done..." rotation='-90 0 0' color='white'>
+        <a-animation attribute="position" from="-2 .3 0" to="-2 .3 0.1" direction="alternate" dur="500" repeat="indefinite"
+          easing='ease-in-out-cubic'></a-animation>
+      </a-text>
+      <a-entity obj-model="obj: url(my.obj); 
+            mtl: url(my.mtl)">
+      </a-entity>
+    </a-marker> -->
+
+    <!-- <a-marker preset='kanji'>
+      <a-text side='double' value="Test text \n done..." rotation='-90 0 0' color='white'>
+          <a-animation attribute="position" from="-2 .3 0" to="-2 .3 0.1" direction="alternate" dur="500" repeat="indefinite"
+            easing='ease-in-out-cubic'></a-animation>
+        </a-text>
+      <a-entity obj-model="obj: url(PalletePack/one/one.obj); 
+        mtl: url(PalletePack/one/one.mtl)">
+      </a-entity>
+    </a-marker> -->
+
+    <!-- <a-marker preset='hiro'>
+      <a-video src="plag.mp4" width="4" height="2" rotation="-90 0 0"></a-video>
+    </a-marker> -->
+
+
+
+    <!-- <a-marker preset='kanji'>
+      <a-entity position="0 0 -10" scale="0.5 0.5 0.5" json-model="src: test.json"
+        animation-mixer="clip: idle"></a-entity>
+    </a-marker> -->
+
+    <a-marker preset='custom' type="pattern" url="mark/one/pattern-marker.patt">
+      <a-entity obj-model="obj: url(PalletePack/one/one.obj); 
+            mtl: url(PalletePack/one/one.mtl)">
+      </a-entity>
+    </a-marker>
+
+    <a-marker preset='custom' type="pattern" url="mark/two/pattern-marker.patt">
+      <a-entity obj-model="obj: url(PalletePack/two/two.obj); 
+            mtl: url(PalletePack/two/two.mtl)">
+      </a-entity>
+    </a-marker>
+
+    <a-marker preset='custom' type="pattern" url="mark/three/pattern-marker.patt">
+      <a-entity obj-model="obj: url(PalletePack/tree/tree.obj); 
+            mtl: url(PalletePack/tree/tree.mtl)">
+      </a-entity>
+    </a-marker>
+
+    <a-marker preset='custom' type="pattern" url="mark/fore/pattern-marker.patt">
+      <a-entity obj-model="obj: url(PalletePack/fore/fore.obj); 
+            mtl: url(PalletePack/fore/fore.mtl)">
+      </a-entity>
+    </a-marker>
+
+    <a-marker preset='custom' type="pattern" url="mark/five/pattern-marker.patt">
+      <a-entity obj-model="obj: url(PalletePack/five/five.obj); 
+            mtl: url(PalletePack/five/five.mtl)">
+      </a-entity>
+    </a-marker>
+
+    <a-marker preset='custom' type="pattern" url="mark/six/pattern-marker.patt">
+      <a-entity obj-model="obj: url(PalletePack/six/six.obj); 
+            mtl: url(PalletePack/six/six.mtl)">
+      </a-entity>
+    </a-marker>
+    
+    <a-marker preset='custom' type="pattern" url="mark/seven/pattern-marker.patt">
+      <a-entity obj-model="obj: url(PalletePack/seven/seven.obj); 
+            mtl: url(PalletePack/seven/seven.mtl)">
+      </a-entity>
+    </a-marker>
+
+    <a-marker preset='custom' type="pattern" url="mark/eight/pattern-marker.patt">
+      <a-entity obj-model="obj: url(PalletePack/eith/eith.obj); 
+            mtl: url(PalletePack/eith/eith.mtl)">
+      </a-entity>
+    </a-marker>
+
+    <a-marker preset='custom' type="pattern" url="mark/nine/pattern-marker.patt">
+      <a-entity obj-model="obj: url(PalletePack/nine/nine.obj); 
+            mtl: url(PalletePack/nine/nine.mtl)">
+      </a-entity>
+    </a-marker>
+
+    <a-marker preset='custom' type="pattern" url="mark/ten/pattern-marker.patt">
+      <a-entity obj-model="obj: url(PalletePack/ten/ten.obj); 
+            mtl: url(PalletePack/ten/ten.mtl)">
+      </a-entity>
+    </a-marker>
+ 
+
+
+    <!-- <a-entity camera></a-entity>  -->
+    <a-camera-static />
+  </a-scene>
+</body>
+
+</html>
