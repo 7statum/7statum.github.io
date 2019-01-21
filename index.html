@@ -7,17 +7,21 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="shortcut icon" href="favicon.png">
-  <script src="src/aframe.min.js"></script>
-  <script src="src/aframe-ar.js"></script>
+  <script src="aframe/src/aframe.min.js"></script>
+  <script src="aframe/src/aframe-extras.loaders.min.js"></script>
+  <!-- <script src="aframe/examples/vendor/aframe/build/aframe.js"></script> -->
+  <script src='aframe/build/aframe-ar.js'></script>
   <!-- <script>THREEx.ArToolkitContext.baseURL = "three.js/"</script> -->
-<script src="marker-detect.js"></script>
+  <script>ARjs.Context.baseURL = 'three.js/'</script>
+  <script src="marker-detect.js"></script>
+
 </head>
 
 <body style='margin : 0px; overflow: hidden;'>
   <!-- input a-scene tag: -- allowfullscreen="yes" -->
   <a-scene embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; detectionMode: mono_matrix; sourceType: webcam;'>
 
-      <a-light type="point" color="white" intensity="10"></a-light>
+    <a-light type="point" color="white" intensity="10"></a-light>
 
     <!-- <a-marker preset='hiro'>
       <a-text side='double' value="Test text \n done..." rotation='-90 0 0' color='white'>
@@ -117,24 +121,24 @@
 
 
     <a-assets>
-        <a-asset-item id="back" src="gltf/Sourse/DisplayBack/displayBack.gltf"></a-asset-item>
+      <a-asset-item id="back" src="gltf/Sourse/DisplayBack/displayBack.gltf"></a-asset-item>
       <!-- <img id="back" crossorigin="anonymous" src="gltf/Sourse/AR_Background.png"></img> -->
       <img id="head" crossorigin="anonymous" src="gltf/Sourse/AR_Head.png"></img>
       <img id="hand" crossorigin="anonymous" src="gltf/Sourse/AR_Hand.png"></img>
     </a-assets>
 
     <a-marker preset='hiro' id='marker-hiro' registerevents>
-        <a-gltf-model src="#back" scale=".25 .25 .25" position="0 0 .5"></a-gltf-model>
-        <a-image scale="2.5 2.5 2.5" rotation="-90 0 0" position = "0.2 0.5 0" src="#head" transparent="true" alpha-test="0.5"></a-image>
-        <a-image scale="3 2 2" rotation="-90 0 0" position = "-0.1 1.5 0.5" src="#hand" transparent="true" alpha-test="0.5"></a-image>
+      <a-gltf-model src="#back" scale=".25 .25 .25" position="0 0 .5"></a-gltf-model>
+      <a-image scale="2.5 2.5 2.5" rotation="-90 0 0" position="0.2 0.5 0" src="#head" transparent="true" alpha-test="0.5"></a-image>
+      <a-image scale="3 2 2" rotation="-90 0 0" position="-0.1 1.5 0.5" src="#hand" transparent="true" alpha-test="0.5"></a-image>
     </a-marker>
 
     <a-marker preset='custom' type="pattern" url="mark/one/pattern-marker.patt" registerevents>
-        <a-gltf-model src="#back" scale=".25 .25 .25" position="0 0 .5"></a-gltf-model>
-        <a-image scale="2.5 2.5 2.5" rotation="-90 0 0" position = "0.2 0.5 0" src="#head" transparent="true" alpha-test="0.5"></a-image>
-        <a-image scale="3 2 2" rotation="-90 0 0" position = "-0.1 1.5 0.5" src="#hand" transparent="true" alpha-test="0.5"></a-image>
+      <a-gltf-model src="#back" scale=".25 .25 .25" position="0 0 .5"></a-gltf-model>
+      <a-image scale="2.5 2.5 2.5" rotation="-90 0 0" position="0.2 0.5 0" src="#head" transparent="true" alpha-test="0.5"></a-image>
+      <a-image scale="3 2 2" rotation="-90 0 0" position="-0.1 1.5 0.5" src="#hand" transparent="true" alpha-test="0.5"></a-image>
     </a-marker>
-    
+
 
 
     <a-marker preset='hiro'>
