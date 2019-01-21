@@ -110,7 +110,7 @@
 	var boingSound = new THREE.Audio( listener );
 
 	var audioLoader = new THREE.AudioLoader();
-	audioLoader.load( 'sounds/140867__juskiddink__boing.wav', function( buffer ) {
+	audioLoader.load( './sounds/140867__juskiddink__boing.wav', function( buffer ) {
 		boingSound.setBuffer( buffer );
 		// boingSound.setLoop(true);
 		boingSound.setVolume(0.5);
