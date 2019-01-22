@@ -7,7 +7,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="shortcut icon" href="favicon.png">
-
+  <script src="marker-detect.js"></script>
+  <link rel="stylesheet" href="style.css">
   <script src="aframe/src/aframe.min.js"></script>
   <script src="aframe/src/aframe-extras.loaders.min.js"></script>
   <script src='src/aframe-sprite-particles-component.js'></script>
@@ -15,11 +16,14 @@
   <script src='src/aframe-gif-shader.js'></script>
   <!-- <script src='src/aframe-gif-component.js'></script> -->
   <script>ARjs.Context.baseURL = 'three.js/'</script>
-  <script src="marker-detect.js"></script>
 
 </head>
 
 <body style='margin : 0px; overflow: hidden;'>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
   <!-- input a-scene tag: -- allowfullscreen="yes" -->
   <a-scene embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam;'>
 
@@ -94,7 +98,8 @@
       <img id="hand" crossorigin="anonymous" src="gltf/Sourse/AR_Hand.png"></img>
     </a-assets>
 
-    <a-marker preset='custom' type="pattern" url="mark/one/pattern-marker.patt" registerevents>
+    <a-marker preset='custom' type="pattern" url="mark/two/pattern-marker.patt" registerevents>
+      
       <!-- Particle -->
       <a-entity>
         <a-entity position="0 0 -1.77" rotation="0 10 0" sprite-particles="texture: gltf/smoke.png; scale: 1..2; radialVelocity: .08; acceleration: 0 0 -.2; rotation: 1..360 color: red,yellow; opacity: 0.1..0.3; lifeTime: 1..1.5">
@@ -112,7 +117,25 @@
 
     </a-marker>
 
-    <a-entity camera></a-entity> 
+
+
+
+
+    <a-marker preset='custom' type="pattern" url="mark/one/pattern-marker.patt" registerevents>
+      
+      <!-- GIF -->
+      <!-- <a-entity geometry="primitive:plane;segments:4;" scale="0.4 1 2.3" rotation="-90 0 0" position="0.3 -0.03 -0.9"
+        material="shader:gif;src:url(gltf/giphy.gif);color:white;" gif=""></a-entity> -->
+
+      <!-- Alpha Png Image -->
+
+      <a-image scale="3.5 3.5 3.5" rotation="-90 0 0" position="0 0 0" src="#back" transparent="true" alpha-test=".5"></a-image>
+      <a-image scale="2 2 2" rotation="-90 0 0" position=".6 .5 0" src="#head" transparent="true" alpha-test=".5"></a-image>
+      <a-image scale="2.5 1.5 1.5" rotation="-90 0 0" position=".3 1.2 0.35" src="#hand" transparent="true" alpha-test=".5"></a-image>
+
+    </a-marker>
+
+    <a-entity camera></a-entity>
     <!-- <a-camera-static /> -->
   </a-scene>
 </body>
