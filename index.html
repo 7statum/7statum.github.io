@@ -7,11 +7,13 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="shortcut icon" href="favicon.png">
+
   <script src="aframe/src/aframe.min.js"></script>
   <script src="aframe/src/aframe-extras.loaders.min.js"></script>
-  <!-- <script src="aframe/examples/vendor/aframe/build/aframe.js"></script> -->
+  <script src='src/aframe-sprite-particles-component.js'></script>
   <script src='aframe/build/aframe-ar.js'></script>
-  <!-- <script>THREEx.ArToolkitContext.baseURL = "three.js/"</script> -->
+  <script src='src/aframe-gif-shader.js'></script>
+  <!-- <script src='src/aframe-gif-component.js'></script> -->
   <script>ARjs.Context.baseURL = 'three.js/'</script>
   <script src="marker-detect.js"></script>
 
@@ -22,41 +24,6 @@
   <a-scene embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; detectionMode: mono_matrix; sourceType: webcam;'>
 
     <a-light type="point" color="white" intensity="10"></a-light>
-
-    <!-- <a-marker preset='hiro'>
-      <a-text side='double' value="Test text \n done..." rotation='-90 0 0' color='white'>
-        <a-animation attribute="position" from="-2 .3 0" to="-2 .3 0.1" direction="alternate" dur="500" repeat="indefinite"
-          easing='ease-in-out-cubic'></a-animation>
-      </a-text>
-      <a-entity obj-model="obj: url(my.obj); 
-            mtl: url(my.mtl)">
-      </a-entity>
-    </a-marker> -->
-
-    <!-- <a-marker preset='kanji'>
-      <a-text side='double' value="Test text \n done..." rotation='-90 0 0' color='white'>
-          <a-animation attribute="position" from="-2 .3 0" to="-2 .3 0.1" direction="alternate" dur="500" repeat="indefinite"
-            easing='ease-in-out-cubic'></a-animation>
-        </a-text>
-      <a-entity obj-model="obj: url(PalletePack/one/one.obj); 
-        mtl: url(PalletePack/one/one.mtl)">
-      </a-entity>
-    </a-marker> -->
-
-    <!-- <a-marker preset='hiro'>
-      <a-video src="plag.mp4" width="4" height="2" rotation="-90 0 0"></a-video>
-    </a-marker> -->
-
-
-
-    <!-- <a-marker preset='kanji'>
-      <a-entity position="0 0 -10" scale="0.5 0.5 0.5" json-model="src: test.json"
-        animation-mixer="clip: idle"></a-entity>
-    </a-marker> -->
-
-
-
-
 
     <!-- 
     <a-marker preset='custom' type="pattern" url="mark/one/pattern-marker.patt">
@@ -121,32 +88,32 @@
 
 
     <a-assets>
-      <a-asset-item id="back" src="gltf/Sourse/DisplayBack/displayBack.gltf"></a-asset-item>
-      <!-- <img id="back" crossorigin="anonymous" src="gltf/Sourse/AR_Background.png"></img> -->
+      <!-- <a-asset-item id="back" src="gltf/Sourse/DisplayBack/displayBack.gltf"></a-asset-item> -->
+      <img id="back" crossorigin="anonymous" src="gltf/Sourse/AR_Background.png"></img>
       <img id="head" crossorigin="anonymous" src="gltf/Sourse/AR_Head.png"></img>
       <img id="hand" crossorigin="anonymous" src="gltf/Sourse/AR_Hand.png"></img>
     </a-assets>
 
-    <a-marker preset='hiro' id='marker-hiro' registerevents>
-      <a-gltf-model src="#back" scale=".2 .2 .2" position="0 0 .5"></a-gltf-model>
-      <a-image scale="2 2 2" rotation="-90 0 0" position="0.2 0.5 0" src="#head" transparent="true" alpha-test="0.5"></a-image>
-      <a-image scale="2.5 1.5 1.5" rotation="-90 0 0" position="-0.1 1.5 0.5" src="#hand" transparent="true" alpha-test="0.5"></a-image>
-    </a-marker>
-
     <a-marker preset='custom' type="pattern" url="mark/one/pattern-marker.patt" registerevents>
-      <a-gltf-model src="#back" scale=".2 .2 .2" position="0 0 .5"></a-gltf-model>
-      <a-image scale="2 2 2" rotation="-90 0 0" position="0.2 0.5 0" src="#head" transparent="true" alpha-test="0.5"></a-image>
-      <a-image scale="2.5 1.5 1.5" rotation="-90 0 0" position="-0.1 1.5 0.5" src="#hand" transparent="true" alpha-test="0.5"></a-image>
+      <!-- Particle -->
+      <a-entity>
+        <a-entity position="0 0 -1.77" rotation="0 10 0" sprite-particles="texture: smoke.png; scale: 1.7; radialVelocity: .08; acceleration: 0 0 -.2; rotation: 1..360 color: red,yellow; opacity: 0.1..0.3; lifeTime: 1..1.5">
+        </a-entity>
+      </a-entity>
+      <!-- GIF -->
+      <a-entity geometry="primitive:plane;segments:4;" scale="0.4 1 2.3" rotation="-90 0 0" position="0.3 -0.02 -0.9"
+        material="shader:gif;src:url(giphy.gif);color:white;" gif=""></a-entity>
+
+      <!-- Alpha Png Image -->
+
+      <a-image scale="3.5 3.5 3.5" rotation="-90 0 0" position="0 0 0" src="#back" transparent="true" alpha-test=".5"></a-image>
+      <a-image scale="2 2 2" rotation="-90 0 0" position=".6 .5 0" src="#head" transparent="true" alpha-test=".5"></a-image>
+      <a-image scale="2.5 1.5 1.5" rotation="-90 0 0" position=".3 1.2 0.35" src="#hand" transparent="true" alpha-test=".5"></a-image>
+
     </a-marker>
 
-
-
-    <a-marker preset='hiro'>
-
-    </a-marker>
-
-    <!-- <a-entity camera></a-entity>  -->
-    <a-camera-static />
+    <a-entity camera></a-entity> 
+    <!-- <a-camera-static /> -->
   </a-scene>
 </body>
 
