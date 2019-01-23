@@ -1,7 +1,5 @@
-$(document).ready(function ($) {
-    $('#preloader').css('display', 'none');
-  });
-    AFRAME.registerComponent('registerevents', {
+
+  AFRAME.registerComponent('registerevents', {
     init: function () {
         var marker = this.el;
         var avideo = document.getElementById('avideo');

@@ -202,7 +202,7 @@ var SpriteSheet = AFRAME.registerComponent('sprite-sheet', {
      * @param {number} frameNum
      */
     adjustTexture: function adjustTexture(frameNum) {
-        console.log(frameNum);
+        // console.log(frameNum);
         // image hasn't loaded, can't draw anything
         if (!this.imageLoaded) return;
 
