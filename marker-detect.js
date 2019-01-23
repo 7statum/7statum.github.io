@@ -46,11 +46,10 @@ AFRAME.registerComponent('registerevents', {
         tween.onComplete(function () { animation.progress = 0;});
         tween.repeat(Infinity);
         tween.start();
-    }
-    //,
-    // tick: function () { },
-    // remove: function () { },
-    // pause: function () { },
-    // play: function () { }
+    },
+    tick: function () { },
+    remove: function () { },
+    pause: function () { },
+    play: function () { }
 });
 
