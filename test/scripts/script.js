@@ -23,18 +23,19 @@ function productList(json) {
         clone.getElementsByClassName('product_description')[0].childNodes[1].innerHTML = json[i].title
         clone.getElementsByClassName('goldPrice')[0].innerHTML = json[i].priceGold
         clone.getElementsByClassName('retailPrice')[0].innerHTML = json[i].priceRetail
-
+        // Product count
         stepper[i].addEventListener('click', function(e) {
             if(e.target.className == "stepper-arrow up"){
                 this.childNodes[1].setAttribute("value", +this.childNodes[1].getAttribute('value')+ +1)
-                console.log(this.parentElement.parentElement.parentElement.getElementsByClassName('goldPrice')[0].innerHTML = this.parentElement.parentElement.parentElement.getElementsByClassName('goldPrice')[0].innerText * this.childNodes[1].getAttribute('value'))
+                this.parentElement.parentElement.parentElement.getElementsByClassName('goldPrice')[0].innerHTML = this.parentElement.parentElement.parentElement.getElementsByClassName('goldPrice')[0].innerText * this.childNodes[1].getAttribute('value')
             }
             if(e.target.className == "stepper-arrow down"){
                 this.childNodes[1].setAttribute("value", this.childNodes[1].getAttribute('value')-1)
-                console.log(this.parentElement.parentElement.parentElement.getElementsByClassName('goldPrice')[0].innerHTML = this.parentElement.parentElement.parentElement.getElementsByClassName('goldPrice')[0].innerText / (+this.childNodes[1].getAttribute('value') + +1))
+                this.parentElement.parentElement.parentElement.getElementsByClassName('goldPrice')[0].innerHTML = this.parentElement.parentElement.parentElement.getElementsByClassName('goldPrice')[0].innerText / (+this.childNodes[1].getAttribute('value') + +1)
             }
         })
-        // ADD
+
+        // Add
         pa[0].appendChild(clone.cloneNode(true));
     }
 };
