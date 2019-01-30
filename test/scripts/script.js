@@ -1,5 +1,5 @@
 // JSON file import
-var products = "test/products.json";
+var products = "https://7statum.github.io/test/products.json";
 var request = new XMLHttpRequest();
 request.open('GET', products);
 request.responseType = 'json';
