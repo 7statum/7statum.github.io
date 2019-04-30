@@ -15,8 +15,8 @@
             <!-- <a-asset-item id="back" src="gltf/Sourse/DisplayBack/displayBack.gltf"></a-asset-item> -->
             <img id="cloud" crossorigin="anonymous" src="gltf/Sourse/AR_Cloud.png"><img>
             <img id="background" crossorigin="anonymous" src="gltf/Sourse/AR_Back.png"><img>
-            <img id="back" crossorigin="anonymous" src="gltf/Sourse/AR_Background.png"><img>
-            <img id="back_exp" crossorigin="anonymous" src="gltf/Sourse/AR_Background_exp.png"><img>
+            <img id="back" crossorigin="anonymous" src="gltf/Sourse/AR_Background_two.png"><img>
+            <!-- <img id="back_exp" crossorigin="anonymous" src="gltf/Sourse/AR_Background_exp.png"><img> -->
             <!-- <img id="train" crossorigin="anonymous" src="gltf/Sourse/AR_Train.png"></img> -->
             <img id="head" crossorigin="anonymous" src="gltf/Sourse/AR_Head.png"></img>
             <img id="hand" crossorigin="anonymous" src="gltf/Sourse/AR_Hand.png"></img>
@@ -24,26 +24,26 @@
         <a-marker preset='custom' type="pattern" url="mark/qrmark/pattern-marker.patt" id='qr-marker' registerevents>
             
             <!-- <a-image src="gltf/spritesheet2.png" scale="0.4 1 2.3" rotation="-90 0 0" position="0.3 -0.06 -0.9" sprite-sheet="cols:31; rows: 1; progress: 0; "></a-image> -->
-            <a-image src="gltf/spsheet.jpg" scale="0.5 1 2.3" rotation="-90 0 0" position="0.3 -0.06 -0.9" sprite-sheet="cols:1; rows: 28; progress: 0; "></a-image>
+            <a-image src="gltf/spsheet.jpg" scale="0.5 1 2.3" rotation="-90 0 0" position="0.3 -0.06 -1.15" sprite-sheet="cols:1; rows: 28; progress: 0; "></a-image>
 
             <!-- <a-asset-item id="back" src="gltf/gltfModel/House.gltf"> position = x z y - up + bown  -->
             <a-image scale="4 4 4" rotation="-90 0 0" position="0 -0.3 -2" src="#cloud" transparent="true" alpha-test=".5"></a-image>
             <a-image scale="4 4 4" rotation="-90 0 0" position="0 -0.2 -1" src="#background" transparent="true" alpha-test=".5"></a-image>
-            <a-image scale="3 3 3" rotation="-90 0 0" position="0 0.5 0.5" src="#back_exp" transparent="true" alpha-test=".5"></a-image>
-            <a-image scale="3.5 3.5 3.5" rotation="-90 0 0" position="0 0 0" src="#back" transparent="true" alpha-test=".5"></a-image>
+            <!-- <a-image scale="3 3 3" rotation="-90 0 0" position="0 0.5 0.5" src="#back_exp" transparent="true" alpha-test=".5"></a-image> -->
+            <a-image scale="4 4 4" rotation="-90 0 0" position="-.5 0 0" src="#back" transparent="true" alpha-test=".5"></a-image>
             <a-image scale="2 2 2" rotation="-90 0 0" position=".6 .6 0" src="#head" transparent="true" alpha-test=".5"></a-image>
             <a-image scale="1.5 1.5 1.5" rotation="-90 0 0" position="-0.4 1 0" src="#hand" transparent="true"
                 alpha-test=".5"></a-image>
 
         </a-marker>
-        <a-marker preset='custom' type="pattern" url="mark/one/pattern-marker.patt" id='marker-one' registerevents>
+        <!-- <a-marker preset='custom' type="pattern" url="mark/one/pattern-marker.patt" id='marker-one' registerevents>
 
             <a-image scale="3.5 3.5 3.5" rotation="-90 0 0" position="0 0 0" src="#back" transparent="true" alpha-test=".5"></a-image>
             <a-image scale="2 2 2" rotation="-90 0 0" position=".6 .5 0" src="#head" transparent="true" alpha-test=".5"></a-image>
             <a-image scale="2.5 1.5 1.5" rotation="-90 0 0" position="0 1.5 10" src="#hand" transparent="true"
                 alpha-test=".5"></a-image>
 
-        </a-marker>
+        </a-marker> -->
         <a-entity camera></a-entity>
     </a-scene>
 </body>
